@@ -1,1 +1,12 @@
 
+<style>
+  div {
+    width: 50%;
+    height: 100px;
+    background-color: pink;
+    transition: background-color 2s;
+    transition-delay: 1.5s;
+    box-sizing:border-box;
+    padding:10px;
+  }
+</style>
