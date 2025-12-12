@@ -8,41 +8,34 @@
 </head>
 <body>
 
-  <!-- SPLASH -->
-  <div id="splash" class="splash">
+  <!-- Splash screen -->
+  <div class="splash">
     <h1>Review</h1>
     <p>Get ready…</p>
   </div>
 
-  <!-- MAIN PAGE -->
-  <main id="main" class="main hidden">
+  <!-- Main content (already behind the splash) -->
+  <main class="main">
     <h2>Flashcards</h2>
 
     <div class="cards">
-      <div class="card" tabindex="0">
-        <div class="card-inner">
-          <div class="card-face front">What is 7 × 8?</div>
-          <div class="card-face back">56</div>
-        </div>
-      </div>
+      <details class="card">
+        <summary class="front">What is 7 × 8?</summary>
+        <div class="back">56</div>
+      </details>
 
-      <div class="card" tabindex="0">
-        <div class="card-inner">
-          <div class="card-face front">CSS stands for?</div>
-          <div class="card-face back">Cascading Style Sheets</div>
-        </div>
-      </div>
+      <details class="card">
+        <summary class="front">CSS stands for?</summary>
+        <div class="back">Cascading Style Sheets</div>
+      </details>
 
-      <div class="card" tabindex="0">
-        <div class="card-inner">
-          <div class="card-face front">Spanish: “I will go”</div>
-          <div class="card-face back">Iré</div>
-        </div>
-      </div>
+      <details class="card">
+        <summary class="front">Spanish: “I will go”</summary>
+        <div class="back">Iré</div>
+      </details>
     </div>
   </main>
 
-  <script src="script.js"></script>
 </body>
 </html>
 
