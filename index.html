@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Hover Transition</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Cards</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <div>Move your cursor here.</div>
+  <!-- Opening animation (plays once on load) -->
+  <div class="splash" aria-hidden="true">
+    <div class="splash-box">
+      <h2>Review Mode</h2>
+      <p>Hover cards to reveal answers</p>
+    </div>
+  </div>
+
+  <header class="top">
+    <h1>Flashcard Review</h1>
+    <p>Hover a card to reveal the answer.</p>
+  </header>
+
+  <main class="grid">
+
+    <section class="card">
+      <h3 class="q">1) What does CSS stand for?</h3>
+      <div class="a">Cascading Style Sheets</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">2) What tag links an external CSS file?</h3>
+      <div class="a">&lt;link rel="stylesheet" href="styles.css"&gt;</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">3) What does :hover do?</h3>
+      <div class="a">Applies styles when the mouse is over an element</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">4) What property changes text color?</h3>
+      <div class="a">color</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">5) What property changes background color?</h3>
+      <div class="a">background-color</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">6) What does padding do?</h3>
+      <div class="a">Adds space inside an element (between content and border)</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">7) What does margin do?</h3>
+      <div class="a">Adds space outside an element (between elements)</div>
+    </section>
+
+    <section class="card">
+      <h3 class="q">8) What does transition do?</h3>
+      <div class="a">Smoothly animates a change between styles</div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <p>Made with HTML + CSS (no JavaScript)</p>
+  </footer>
 
 </body>
 </html>
