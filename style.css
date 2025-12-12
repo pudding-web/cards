@@ -1,13 +1,138 @@
-div {
-  width: 25%;
-  height: 200px;
-  background-color: grey;
-  padding: 5px;
-  transition: width 3s, height 2s;
+/* Basic page styling */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1220;
+  color: #e9eefc;
 }
 
-div:hover {
-  width: 75%;
-  height: 100px;
+/* Title area */
+.top {
+  padding: 28px 18px 10px;
+  text-align: center;
 }
 
+.top h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.top p {
+  margin: 10px 0 0;
+  opacity: 0.85;
+}
+
+/* Grid layout for cards */
+.grid {
+  width: min(1000px, 92vw);
+  margin: 18px auto 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+/* Card base */
+.card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px;
+  padding: 16px;
+  min-height: 140px;
+  position: relative;
+  overflow: hidden;
+
+  /* small hover lift */
+  transition: transform 250ms ease, background 250ms ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.12);
+}
+
+.q {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+/* Answer starts hidden */
+.a {
+  margin-top: 14px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(0,0,0,0.25);
+
+  /* Hidden state */
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(10px);
+  filter: blur(6px);
+
+  /* Transition controls reveal */
+  transition: opacity 350ms ease,
+              max-height 450ms ease,
+              transform 350ms ease,
+              filter 350ms ease;
+}
+
+/* Reveal on hover */
+.card:hover .a {
+  opacity: 1;
+  max-height: 140px;   /* big enough to show the text */
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Footer */
+.foot {
+  text-align: center;
+  padding: 16px;
+  opacity: 0.7;
+}
+
+/* Opening animation splash (runs once) */
+.splash {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #0b1220;
+  z-index: 999;
+
+  /* This is the "plays once on load" animation */
+  animation: splashFade 1.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.splash-box {
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  text-align: center;
+
+  animation: popIn 700ms ease both;
+}
+
+.splash-box h2 {
+  margin: 0 0 6px;
+}
+
+.splash-box p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+@keyframes splashFade {
+  0%   { opacity: 1; visibility: visible; }
+  75%  { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.92); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
