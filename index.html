@@ -1,63 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <h1 class="title">Flashcard Review</h1>
-  <p class="text">
-  Hover over the box to reveal the awnser.
-</p>
-
-
   <meta charset="UTF-8">
   <title>Flashcard Review</title>
 
   <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background-color: #0b1220;
+      color: white;
+    }
+
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    
     .box {
-      width: 25%;
-      height: 200px;
+      width: 250px;
+      height: 100px;
       background-color: grey;
       padding: 10px;
-      margin: 20px
       position: relative;
 
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      color: black;
 
-        margin-left: 20px; 
+      transition: width 0.4s ease;
+    }
+
+
+    .box:hover {
+      width: 350px;
+    }
+
+    .box span {
+      z-index: 1;
     }
 
     .box::after {
-      content: "Move your cursor here";
+      content: " — Answer shows here";
       position: absolute;
-      right: 1600px;
+      left: 260px;
       opacity: 0;
       white-space: nowrap;
-      transition: opacity 0.4s ease, right 0.4s ease;
+
+      transition: opacity 0.4s ease, left 0.4s ease;
     }
 
     .box:hover::after {
       opacity: 1;
-      right: 1000px;
+      left: 200px;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="box">Move your cursor here</div>
+  <h1>Flashcard Review</h1>
+  <p>Hover over a box to reveal the answer.</p>
+
+  <div class="container">
+
+    <div class="box"><span>CSS stands for</span></div>
+    <div class="box"><span>HTML stands for</span></div>
+    <div class="box"><span>:hover does</span></div>
+    <div class="box"><span>padding means</span></div>
+    <div class="box"><span>margin means</span></div>
+    <div class="box"><span>background-color does</span></div>
+    <div class="box"><span>transition is used to</span></div>
+    <div class="box"><span>display:flex does</span></div>
+
+  </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
 
 
