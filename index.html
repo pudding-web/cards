@@ -5,6 +5,7 @@
   <title>Flashcard Review</title>
 
   <style>
+
     body {
       margin: 0;
       padding: 20px;
@@ -20,6 +21,40 @@
     p {
       margin-bottom: 20px;
     }
+
+ 
+    .splash {
+      position: fixed;
+      inset: 0;
+      background-color: #b6e6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+
+      animation: splashFade 2s forwards;
+    }
+
+    .splash h2 {
+      font-size: 64px;
+      color: #003b5c;
+      margin: 0;
+    }
+
+    @keyframes splashFade {
+      0% {
+        opacity: 1;
+      }
+      70% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+    }
+
 
     .container {
       display: flex;
@@ -58,10 +93,12 @@
       transition: opacity 0.4s ease, left 0.4s ease;
     }
 
+
     .box:hover::after {
       opacity: 1;
       left: 230px;
     }
+
 
     .css::after {
       content: "Cascading Style Sheets";
@@ -72,7 +109,7 @@
     }
 
     .hover::after {
-      content: "Triggers styles when the mouse is over an element";
+      content: "Applies styles when the mouse is over an element";
     }
 
     .padding::after {
@@ -92,18 +129,23 @@
     }
 
     .flex::after {
-      content: "Aligns and positions elements easily";
+      content: "Helps align and position elements";
     }
   </style>
 </head>
 
 <body>
 
+
+  <div class="splash">
+    <h2>Flashcard Review</h2>
+  </div>
+
+
   <h1>Flashcard Review</h1>
   <p>Hover over a box to reveal the answer.</p>
 
   <div class="container">
-
     <div class="box css"><span>CSS stands for</span></div>
     <div class="box html"><span>HTML stands for</span></div>
     <div class="box hover"><span>:hover does</span></div>
@@ -112,18 +154,10 @@
     <div class="box bg"><span>background-color does</span></div>
     <div class="box transition"><span>transition is used to</span></div>
     <div class="box flex"><span>display:flex does</span></div>
-
   </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 
