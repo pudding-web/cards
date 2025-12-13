@@ -1,16 +1,43 @@
-<style>
-  div {
-    width: 25%;
-    height: 200px;
-    background-color: grey;
-    padding: 5px;
-    transition: width 3s, height 2s;
-  }
-  div:hover {
-    width: 75%;
-    height: 100px;
-    <div>Move your cursor here.</div>
-  }
-</style>
-<div>Move your cursor here.</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hover Text Test</title>
 
+  <style>
+    .box {
+      width: 25%;
+      height: 200px;
+      background-color: grey;
+      padding: 10px;
+      margin: 40px auto;
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
+
+    .box::after {
+      content: "Move your cursor here";
+      position: absolute;
+      right: -200px;
+      opacity: 0;
+      white-space: nowrap;
+      transition: opacity 0.4s ease, right 0.4s ease;
+    }
+
+    .box:hover::after {
+      opacity: 1;
+      right: -10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">Move your cursor here</div>
+
+</body>
+</html>
