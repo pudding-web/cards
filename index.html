@@ -13,7 +13,6 @@
       color: white;
     }
 
-
     h1 {
       margin-bottom: 10px;
     }
@@ -22,16 +21,14 @@
       margin-bottom: 20px;
     }
 
-
     .container {
       display: flex;
       flex-direction: column;
       gap: 15px;
     }
 
-    
     .box {
-      width: 250px;
+      width: 260px;
       height: 100px;
       background-color: grey;
       padding: 10px;
@@ -44,28 +41,58 @@
       transition: width 0.4s ease;
     }
 
-
     .box:hover {
-      width: 350px;
+      width: 420px;
     }
 
     .box span {
       z-index: 1;
     }
 
+
     .box::after {
-      content: " — Answer shows here";
       position: absolute;
-      left: 260px;
+      left: 280px;
       opacity: 0;
       white-space: nowrap;
-
       transition: opacity 0.4s ease, left 0.4s ease;
     }
 
     .box:hover::after {
       opacity: 1;
-      left: 200px;
+      left: 230px;
+    }
+
+    .css::after {
+      content: "Cascading Style Sheets";
+    }
+
+    .html::after {
+      content: "HyperText Markup Language";
+    }
+
+    .hover::after {
+      content: "Triggers styles when the mouse is over an element";
+    }
+
+    .padding::after {
+      content: "Space inside an element";
+    }
+
+    .margin::after {
+      content: "Space outside an element";
+    }
+
+    .bg::after {
+      content: "Changes the background color";
+    }
+
+    .transition::after {
+      content: "Smoothly animates style changes";
+    }
+
+    .flex::after {
+      content: "Aligns and positions elements easily";
     }
   </style>
 </head>
@@ -77,21 +104,19 @@
 
   <div class="container">
 
-    <div class="box"><span>CSS stands for</span></div>
-    <div class="box"><span>HTML stands for</span></div>
-    <div class="box"><span>:hover does</span></div>
-    <div class="box"><span>padding means</span></div>
-    <div class="box"><span>margin means</span></div>
-    <div class="box"><span>background-color does</span></div>
-    <div class="box"><span>transition is used to</span></div>
-    <div class="box"><span>display:flex does</span></div>
+    <div class="box css"><span>CSS stands for</span></div>
+    <div class="box html"><span>HTML stands for</span></div>
+    <div class="box hover"><span>:hover does</span></div>
+    <div class="box padding"><span>padding means</span></div>
+    <div class="box margin"><span>margin means</span></div>
+    <div class="box bg"><span>background-color does</span></div>
+    <div class="box transition"><span>transition is used to</span></div>
+    <div class="box flex"><span>display:flex does</span></div>
 
   </div>
 
 </body>
 </html>
-
-
 
 
 
