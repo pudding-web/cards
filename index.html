@@ -1,19 +1,14 @@
 <style>
-  @keyframes myAnimation {
-  
-    from { color: orange; }
-
-    to { color: blue; }  
+  div {
+    width: 25%;
+    height: 200px;
+    background-color: salmon;
+    padding: 5px;
+    transition: width 3s, height 2s;
   }
-  div p {
-    font-size: 1.4em;
-    font-weight: bold;
-    animation-name: myAnimation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  div:hover {
+    width: 75%;
+    height: 100px;
   }
 </style>
-
-<div>
-  <p>Color-changing text!</p>
-</div>
+<div>Move your cursor here.</div>
